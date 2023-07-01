@@ -1,0 +1,107 @@
+
+
+
+.loading-1, .loading-2, .loading-3, .loading-4 {
+    border:2px solid #000;
+    border-radius:50%;
+    position:absolute;
+  
+  }
+  .loading-1 {
+    width:100px;
+    height:100px;
+    border-color:transparent #000 transparent transparent;
+    top:200px;
+    left:45%;
+    animation:loading1 2s 50 linear;
+  }
+  .loading-2 {
+    width:80px;
+    height:80px;
+    border-color:transparent transparent transparent #000;
+    top:210px;
+    left:calc(45% + 10px);
+    animation:loading2 2s 50 linear;
+  }
+  .loading-3 {
+    width:60px;
+    height:60px;
+    border-color:#000 transparent       transparent transparent;
+    top:220px;
+    left:calc(45% + 20px);
+    animation:loading1 2s 50 linear;
+  }
+  .loading-4 {
+    width:40px;
+    height:40px;
+    border-color:transparent transparent #000 transparent;
+    top:230px;
+    left:calc(45% + 30px);
+    animation:loading2 2s 50 linear;
+  }
+  
+  @keyframes loading1 {
+    from {transform:rotate(0deg)}
+    to {transform:rotate(720deg)}
+  }
+  @keyframes loading2 {
+    from {transform:rotate(0deg)}
+    to {transform:rotate(-720deg)}
+  }
+  
+  .letter {
+    position:absolute;
+    top:320px;
+    left:44%;
+    font-size:19px;
+    font-family:tahoma;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    height:40px;
+    overflow:hidden;
+    padding-top:15px;
+    animation:paragraph 2s 50 linear;
+    animation-delay:1s
+  }
+  
+  @keyframes paragraph {
+    from {
+      opacity:1;
+    }
+    50% { 
+      opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+  }
+  
+  
+  .d {
+    display:inline-block;
+    padding:0 5px;
+    animation:d 2s 50 ease-in-out;
+  }
+  
+  @keyframes d {
+    from {transform:translate(0, 0)}
+    
+    to {
+      transform:translate(0, 50px)
+    }
+  }
+  
+  .i {
+    display:inline-block;
+    padding:0 2px;
+    animation:i 2s 50 ease-in-out;
+    transition:all 2s ease-in-out
+  }
+  
+  @keyframes i {
+    from {transform:translate(0, 0)}
+  
+    to {
+     transform:translate(0, -50px)
+    }
+  }
